@@ -30,8 +30,8 @@ const addNewGoal = () => {
     
     
     const existingGoals = goalList.querySelectorAll('li'); // Checks if goal already exists
-    for (let goal of existingGoals) {
-        if (goal.textContent === goalInput) {
+    for (let goal of existingGoals) { // This loop iterates over each <li> element in the existingGoals
+        if (goal.textContent.toLowerCase === goalInput.toLowerCase) {
             alert('This goal already exists!')
             return; // Exit the function if the goal already exists
         }
